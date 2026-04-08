@@ -1,0 +1,227 @@
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .navbar a:hover {
+        color: #000;
+    }
+
+    .navbar .nav-link:hover {
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/fond.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(10px);
+        z-index: -1;
+        transform: scale(1.1);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .form-control{
+        background: rgba(0, 0, 0, 0.2); /* Fond noir transparent */
+        width:500px;
+        color:black;
+
+    }
+    .form-control:focus {
+    background-color: rgba(0, 0, 0, 0.1); /* Maintient le fond légèrement transparent */
+    color:black;
+    }
+    .btn-primary:hover {
+    transform: scale(1.05); /* Agrandit légèrement le bouton */
+    transition: transform 0.3s; /* Rend l'agrandissement fluide */
+    }
+    /* Personnalisation de la boîte d'alerte */
+    .swal2-popup {
+        border-radius: 15px !important;
+        background-color: rgba(0, 0, 0, 0.8) !important;
+        color: #fff !important;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Personnalisation du titre */
+    .swal2-title {
+        font-size: 1.8rem !important;
+        color: #ffcc00 !important;
+    }
+
+    /* Personnalisation du texte */
+    .swal2-html-container {
+        font-size: 1rem !important;
+        color: #fff !important;
+        text-align: center;
+    }
+    /* Bouton principal */
+    .swal2-confirm {
+        background-color: #007bff !important;
+        color: #fff !important;
+        border-radius: 10px !important;
+        padding: 10px 20px !important;
+        font-size: 1rem !important;
+        transition: background-color 0.3s ease !important;
+    }
+
+    .swal2-confirm:hover {
+        background-color: #0056b3 !important;
+    }
+
+    /* Fond sombre */
+    .swal2-backdrop {
+        background: rgba(0, 0, 0, 0.7) !important;
+    }
+
+/* Supprime les modifications visuelles pour les champs autofill */
+    input:-webkit-autofill,
+    textarea:-webkit-autofill {
+        background: rgba(0, 0, 0, 0.1) !important; /* Correspond à la couleur de fond initiale */
+        color: inherit !important; /* Conserve la couleur du texte */
+        box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.1) inset !important; /* Élimine le surlignement */
+        border: 1px solid #ddd !important; /* Conserve la bordure initiale */
+    }
+
+    /* Supprime également les animations ou transitions associées */
+    input:-webkit-autofill {
+        transition: background-color 5000s ease-in-out 0s !important;
+    }
+
+    footer {
+        margin-top: auto;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 15px 0;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+    }
+
+    
+/* Media query pour  */
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        flex-direction: column; 
+        align-items: center; 
+        align-self: center;
+    }
+    
+    .navbar a {
+        width: 80%; 
+        text-align: center; 
+        padding: 8% 8%; 
+        border-radius: 2px;
+        align-self: center;
+        position: relative;
+    }
+   
+  
+    footer {
+        margin-top: 10%;
+        width: 100%;
+        position: relative;
+        bottom: 1%;
+        left: 0;
+        padding: 1% 1%;
+        text-align: center;
+        color: #fff;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1% 1px;
+    }
+    
+    .form-control {
+        width: 100%; 
+        align-items: center;
+        align-self: center;
+    }
+    
+    form {
+      display:contents;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      align-content: center;
+      align-self: center ;
+      width: 30%; 
+     
+    }
+    
+    
+    form button {
+        width: 100%; 
+        max-width: 100%; 
+        padding: 10px; 
+        font-size: 0.9rem;
+        align-self: right;
+        align-content: right;
+    }
+
+    body::before {
+        background-size: contain;
+        filter: blur(5px);
+    }
+}
+  /* Media query pour tablette */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar a {
+        font-size: 17px;
+        margin: 0 8px;
+    }
+
+    .navbar .nav-link:hover {
+        font-size: 19px;
+    }
+    .footer {
+      padding: 15px 30px; 
+    }
+  
+    .footer-mentions {
+      font-size: 1rem; 
+      margin-bottom: 10px; 
+    }
+  
+    .footer-icons {
+      gap: 15px; 
+    }
+  
+    .footer-icons a {
+      font-size: 1.4rem; 
+      margin-left: 4px; 
+    }
+}

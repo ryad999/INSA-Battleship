@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Ships</title>
+    <link rel="stylesheet" href="../css/single_player.css">
+    <link rel="stylesheet" href="../css/media_query_single_player.css">
+    <link rel="stylesheet" href="../css/ship_placement.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Le mot clé defer permet d'attendre que la page HTML ait fini de charger :) -->
+     <script src="../js/utils.js" defer></script>
+    <script src="../js/variables.js" defer></script>
+    <script src="../js/bots.js" defer></script>
+    <script src="../js/singleplayerGame.js" charset="utf-8" defer></script>
+    <script src="../js/shipPlacements.js" charset="utf-8" defer></script>
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container d-flex align-items-center">
+          <a class="navbar-brand" href="/">
+              <img src="../images/logo.png" style="width: 100px;" alt="Logo Battleship">
+              <span>INSA'Battleship</span>
+          </a>
+          <ul class="nav ms-4">
+              <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="singleplayer.html">Jouer</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="regle.html">Règles</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+
+    <div class="game-container">
+      <div class="container">
+        <div class="battleship-grid grid-user"></div>
+        <div class="battleship-grid grid-computer"></div>
+      </div>
+  
+      <div class="container hidden-info">
+        <div class="setup-buttons" id="setup-buttons">
+          <button id="start" class="btn">Commencer la partie</button>
+          <button id="rotate" class="btn">Rotation bateau</button>
+          <button id="reset" class="btn">Jeter les bateaux</button>
+        </div>
+        <h3 id="whose-go" class="info-text"></h3>
+        <div id="info" class="info-text">
+          <label for="difficulty">Veuillez choisir une difficulté : </label> 
+          <select id="difficulty">
+            <option value="Easy">Facile</option>
+            <option value="Medium" selected>Moyen</option>
+            <option value="Hard">Difficile</option>
+            <option value="Impossible">Impossible</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="grid-display">
+          <div class="ship destroyer-container" draggable="true"><div id="destroyer-0"></div><div id="destroyer-1"></div></div>
+          <div class="ship submarine-container" draggable="true"><div id="submarine-0"></div><div id="submarine-1"></div><div id="submarine-2"></div></div>
+          <div class="ship cruiser-container" draggable="true"><div id="cruiser-0"></div><div id="cruiser-1"></div><div id="cruiser-2"></div></div>
+          <div class="ship battleship-container" draggable="true"><div id="battleship-0"></div><div id="battleship-1"></div><div id="battleship-2"></div><div id="battleship-3"></div></div>
+          <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
+        </div>
+  
+        <div class="grid-original">
+          <div class="ship destroyer-container" draggable="true"><div id="destroyer-0"></div><div id="destroyer-1"></div></div>
+          <div class="ship submarine-container" draggable="true"><div id="submarine-0"></div><div id="submarine-1"></div><div id="submarine-2"></div></div>
+          <div class="ship cruiser-container" draggable="true"><div id="cruiser-0"></div><div id="cruiser-1"></div><div id="cruiser-2"></div></div>
+          <div class="ship battleship-container" draggable="true"><div id="battleship-0"></div><div id="battleship-1"></div><div id="battleship-2"></div><div id="battleship-3"></div></div>
+          <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
+        </div>
+      </div>
+  
+      <div class="container hidden-info">
+        <div class="setup-buttons" id="setup-buttons">
+        <button id="replay" class="btn">Voulez vous rejouer ?</button>
+      </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-mentions">
+          <p>&copy; 2024 Battleship</p>
+          <p>Mentions légales : INSA'Battleship, 123 Rue Imaginaire, 75000 Paris</p>
+          <p>Consulter les CGU</p>
+      </div>
+      <div class="footer-icons">
+          <p>Suivez-nous et rejoignez la communauté !</p>
+          <a href="https://twitter.com/faketwitter" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://discord.com/fakediscord" target="_blank" aria-label="Discord"><i class="bi bi-discord"></i></a>
+      </div>
+  </footer>
+  </body>
+</html>
