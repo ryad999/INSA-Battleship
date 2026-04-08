@@ -1,0 +1,451 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/fond.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
+  transform: scale(1.1);
+}
+
+.navbar {
+  z-index: 3; /* Assure que la navbar est toujours visible */
+  margin-bottom: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  color: #000;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+.game-container {
+  flex-grow: 1; /* Assure que le conteneur prend tout l'espace vertical disponible */
+  min-height: 110%; /* Donne une hauteur minimale pour éviter l'écrasement */
+  padding: 20% 20px; /* Ajoute des espaces sans affecter la hauteur calculée */
+  position: relative; /* Nécessaire pour que ::before fonctionne correctement */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto; /* Centre horizontalement */
+  margin-top: 5px; /* Décalage sous la navbar */
+  margin-bottom: 5px; /* Ajout d'espace en bas */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+
+
+footer {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  margin-top: 100px; /* Permet au footer de descendre automatiquement */
+}
+
+
+.game-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(10px);
+  background-image: url('../images/fondmmer.jpg');
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 15px;
+}
+
+
+
+.footer-mentions {
+  text-align: left;
+}
+
+.footer-icons {
+  gap: 20px;
+}
+
+.footer-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 5px;
+  transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #ccc;
+}
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 66vh;
+}
+
+.splash-title {
+  font-family: 'Bangers', cursive;
+  font-size: 10rem;
+}
+
+.splash-battleship-image {
+  position: absolute;
+  bottom: 5vh;
+  left: 20vw;
+  width: 100%;
+  transform: rotateY(180deg);
+  pointer-events: none;
+  opacity: .25;
+}
+
+.btn {
+  font-size: inherit;
+  background-color: hsl(208, 78%, 55%);
+  padding: .5em 1em;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: .2em;
+  color: white;
+  text-align: center;
+}
+
+/* Boutons avec texte blanc */
+#setup-buttons .btn {
+  color: white; /* Couleur du texte en blanc */
+  border: none; /* Supprime les bordures si elles existent */
+  transition: all 0.3s ease-in-out; /* Transition fluide pour les effets de survol */
+  border: none;
+  cursor: pointer;
+  text-align: center;
+<<<<<<< Updated upstream
+  width: 200px;
+=======
+  height: 80px;
+>>>>>>> Stashed changes
+}
+
+/* Effet au survol */
+#setup-buttons .btn:hover {
+  background-color: hsl(232, 76%, 41%); /* Couleur de fond au survol */
+  color: #ccc; /* Couleur du texte légèrement grisée au survol */
+  
+}
+
+.splash-btn {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+#replay
+{
+  display: none; 
+}
+
+.splash-btn:first-child {
+  margin-left: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.battleship-grid {
+  margin: 2vmin;
+  display: grid;
+  background-color: transparent;
+  grid-template-rows: repeat(10, 4.6vmin);
+  grid-template-columns: repeat(10, 4.6vmin);
+}
+
+.grid-computer > .taken,
+.grid-computer > .boom {
+  background-color: transparent !important;
+  border-radius: 1 !important;
+}
+
+.taken,
+.ship {
+  position: relative;
+  background-color: hsl(0, 0%, 80%);
+}
+
+.taken.start.vertical,
+.taken.start.vertical::before {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.taken.end.vertical,
+.taken.end.vertical::before {
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.taken.start.horizontal,
+.taken.start.horizontal::before {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.taken.end.horizontal,
+.taken.end.horizontal::before {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.taken.vertical::before,
+.taken.horizontal::before {
+  content: '';
+  position: absolute;
+  border: .3vmin solid white;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+}
+
+.taken.horizontal::before {
+  animation: ripplesY 3s linear infinite;
+  border-left: none;
+  border-right: none;
+}
+
+.taken.vertical::before {
+  animation: ripplesX 3s linear infinite;
+  border-top: none;
+  border-bottom: none;
+}
+
+@keyframes ripplesX {
+  0% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(1.5);
+  }
+}
+
+@keyframes ripplesY {
+  0% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleY(1.5);
+  }
+}
+
+.grid-display {
+  
+  display: flex;
+}
+
+.ship > div {
+  width: 4.6vmin;
+  height: 4.6vmin;
+}
+
+.ship {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1vmin;
+  width: calc(4.6vmin * var(--width, 1));
+  height: calc(4.6vmin * var(--height, 1));
+  border-radius: 2.3vmin;
+  background-size: cover; /* Ajuste l'image à la taille de l'élément */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  background-position: center; /* Centre l'image */
+  border: none; /* Supprime la bordure */
+  background-color: transparent; /* Pas de couleur de fond */
+}
+
+.battleship-grid div {
+  border: 1px solid hsla(0, 0%, 100%, .2);
+  background-color: transparent; /* Rend les cellules transparentes */
+
+}
+
+.hidden-info {
+  font-size: 1.5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-text {
+  color: white;
+  margin: 1rem;
+  width: 0.3;
+
+}
+
+.miss,
+.boom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.boom::after {
+  content: '';
+  position: absolute;
+  width: 4vmin; /* Ajustez la taille */
+  height: 4vmin;
+  background-image: url('../images/crosshair2.png'); /* Utilise l'image du viseur */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; /* Pas de couleur de fond */
+} 
+
+.miss::after {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  width: 2vmin;
+  height: 2vmin;
+}
+
+.miss::after {
+  background-color: white;
+}
+
+
+.miss::before {
+  content: '';
+  position: absolute;
+  animation: hit .2s ease-out forwards;
+  border: 1vmin solid white;
+  border-radius: 100%;
+  width: 2vmin;
+  height: 2vmin;
+}
+
+.boom {
+  animation: boom .2s ease-out forwards;
+}
+
+@keyframes hit {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+
+@keyframes boom {
+  0% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 80%);
+  }
+}
+
+.player {
+  margin: 2vmin;
+}
+
+.connected, .ready {
+  font-weight: normal;
+  opacity: .25;
+  text-decoration: line-through;
+}
+
+.connected.active,
+.ready.active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.grid-original
+{
+  display: none;
+}
+
+/* style pour la difficulte (slider) */
+#difficulty {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.2); 
+  color: #fff; 
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+}
+
+#difficulty option {
+  background-color: #333; 
+  color: #fff; 
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+#info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#info label {
+  margin-bottom: 10px;
+}

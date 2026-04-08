@@ -1,0 +1,102 @@
+/* Media query pour telephone */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .navbar a {
+      width: 80%; 
+      text-align: center; 
+      padding: 8% 8%; 
+      border-radius: 2px;
+    }
+  
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100% ;
+      height: 1%;
+      padding: 10px;
+      margin: 1% 1%;
+      max-height: 1%;
+      overflow-y: auto;
+      
+    }
+    .btn {
+      font-size: 1%;
+      display: contents;
+      align-self: center;
+      width : 50%;
+    }
+    #setup-buttons .btn {
+      width: 31.9% ;
+      font-size: 49.5%;
+    }
+    body::before {
+      background-size: contain;
+      filter: blur(10px);
+    }
+    
+    #info label {
+      margin-bottom: 10px;
+      font-size :80% ;
+    }
+  
+  }
+  /* Media query pour tablette */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .navbar a {
+      font-size: 17px;
+      margin: 0 8px;
+    }
+  
+    .navbar .nav-link:hover {
+      font-size: 19px;
+    }
+  
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 1px;
+      padding: 10px;
+      margin: 1% 1%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+  
+    .game-grid {
+      width: 90%;
+      max-width: 500px;
+    }
+  
+    .ship-container {
+      gap: 15px;
+    }
+    body::before {
+      background-size: contain;
+      filter: blur(20px);
+    }
+    .btn {
+      cursor: pointer;
+      border-radius: .2em;
+      color: white;
+      font-size: 14px;
+      padding: 10% 10%;
+      margin: 1% 1.19%; 
+      
+    }
+    
+    #setup-buttons .btn {
+      color: white; 
+      border: none; 
+      transition: all 0.3s ease-in-out; 
+      border: none;
+      width: 30%;
+      
+    }
+   
+  }
