@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Règles - Battleship</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../css/regle.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container d-flex align-items-center">
+            <a class="navbar-brand" href="/">
+                <img src="../images/logo.png" style="width: 100px;" alt="Logo Battleship">
+                <span>INSA'Battleship</span>
+            </a>
+            <ul class="nav ms-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="singleplayer.html">Jouer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="regle.html">Règles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Rules Section -->
+    <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-4">Règles du jeu Battleship</h1>
+        <div class="card shadow-lg p-4">
+            <h2>But du jeu</h2>
+            <p>Le but de Battleship est de couler tous les navires de votre adversaire avant qu'il ne coule les vôtres. Chaque joueur utilise une grille pour placer ses navires et tirer sur ceux de son adversaire.</p>
+
+            <h2>Détails sur la grille et les navires</h2>
+            <ul>
+                <li><strong>Taille de la grille :</strong> 10x10.</li>
+                <li><strong>Navires disponibles :</strong></li>
+                <ul>
+                    <li>Porte-avions : 5 cases</li>
+                    <li>Croiseur : 4 cases</li>
+                    <li>Contre-torpilleur : 3 cases</li>
+                    <li>Sous-marin : 3 cases</li>
+                    <li>Patrouilleur : 2 cases</li>
+                </ul>
+            </ul>
+
+            <h2>Fonctionnalités du jeu en ligne</h2>
+            <ul>
+                <li>Grille interactive pour placer et attaquer.</li>
+                <li>Temps limite par tour : 30 secondes.</li>
+                <li>Système de résultats en temps réel : "Touché", "Manqué", "Coulé".</li>
+                <li>Gestion des déconnexions : reprise possible ou forfait automatique après 2 minutes.</li>
+            </ul>
+
+            <h2>Déroulement du jeu</h2>
+            <ol>
+                <li><strong>Placement des navires :</strong> Chaque joueur place ses navires sur sa grille. Les navires peuvent être placés horizontalement ou verticalement, mais pas en diagonale. Les navires ne doivent pas se toucher.</li>
+                <li><strong>Attaque :</strong> À tour de rôle, chaque joueur annonce une case sur laquelle il souhaite tirer (ex. : B5).</li>
+                <li><strong>Résultat :</strong>
+                    <ul>
+                        <li><strong>Touché :</strong> Si un navire ennemi occupe cette case.</li>
+                        <li><strong>Manqué :</strong> Si aucune partie d'un navire ne s'y trouve.</li>
+                        <li><strong>Coulé :</strong> Si toutes les cases d'un navire sont touchées.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2>Variantes de jeu</h2>
+            <ul>
+                <li><strong>Mode 2 contre 2 :</strong> Les joueurs se regroupent en équipe et contrôlent des parties distinctes de la flotte.</li>
+                <li><strong>Tournois en ligne :</strong> Les gagnants de chaque match progressent dans un tableau jusqu'à la finale.</li>
+            </ul>
+
+            <h2>Conditions de victoire</h2>
+            <p>Le premier joueur à couler tous les navires de son adversaire remporte la partie.</p>
+
+            <h2>Conseils stratégiques</h2>
+            <ul>
+                <li>Placez vos navires de manière imprévisible pour déjouer votre adversaire.</li>
+                <li>Concentrez vos tirs pour localiser et couler rapidement les navires ennemis.</li>
+                <li>Utilisez des tirs espacés pour cartographier efficacement la grille adverse.</li>
+            </ul>
+
+            <h2>Glossaire</h2>
+            <ul>
+                <li><strong>Touché :</strong> Une attaque réussie sur une case contenant une partie d'un navire.</li>
+                <li><strong>Manqué :</strong> Une attaque sur une case ne contenant aucun navire.</li>
+                <li><strong>Coulé :</strong> Un navire est complètement détruit lorsque toutes ses cases sont touchées.</li>
+                <li><strong>Flotte :</strong> L'ensemble des navires sous le contrôle d'un joueur.</li>
+                <li><strong>Grille :</strong> La zone de jeu où les navires sont placés et où les attaques sont effectuées.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-mentions">
+            <p>&copy; 2024 Battleship</p>
+            <p>Mentions légales : INSA'Battleship, 123 Rue Imaginaire, 75000 Paris</p>
+            <p>Consulter les CGU</p>
+        </div>
+        <div class="footer-icons">
+            <p>Suivez-nous et rejoignez la communauté !</p>
+            <a href="https://twitter.com/faketwitter" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://discord.com/fakediscord" target="_blank" aria-label="Discord"><i class="bi bi-discord"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+</body>
+</html>

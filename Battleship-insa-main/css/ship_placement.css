@@ -1,0 +1,282 @@
+/* Images des bateaux en selection (ceux du bas) */
+
+.destroyer-container {
+    --width: 2;
+    background-image: url('../images/boat/Horizontal/hdestroyer.png'); /* Ajoute l'image du destroyer */
+  }
+  
+  .destroyer-container-vertical {
+    --height: 2;
+    --width: 1;
+    background-image: url('../images/boat/Vertical/destroyer.png'); /* Ajoute l'image du destroyer */
+  
+  }
+  
+  .submarine-container,
+  .cruiser-container {
+    --width: 3;
+    background-image: url('../images/boat/Horizontal/hsubmarine&cruiser.png'); /* Ajoute l'image du destroyer */
+  
+  }
+  
+  .submarine-container-vertical,
+  .cruiser-container-vertical {
+    --height: 3;
+    --width: 1;
+    background-image: url('../images/boat/Vertical/submarine&cruiser.png'); /* Ajoute l'image du destroyer */
+  
+  }
+  
+  .battleship-container {
+    --width: 4;
+    background-image: url('../images/boat/Horizontal/hbattleship.png'); /* Ajoute l'image du destroyer */
+  
+  }
+  
+  .battleship-container-vertical {
+    --height: 4;
+    --width: 1;
+    background-image: url('../images/boat/Vertical/battleship.png'); /* Ajoute l'image du destroyer */
+  
+  }
+  
+  .carrier-container {
+    --width: 5;
+    background-image: url('../images/boat/Horizontal/hcarrier.png')/* Ajoute l'image du destroyer */
+  
+  }
+  
+  .carrier-container-vertical {
+    --height: 5;
+    --width: 1;
+    background-image: url('../images/boat/Vertical/carrier.png'); /* Ajoute l'image du destroyer */
+  }
+  
+  
+  
+  
+  /* Images de bateaux sur le board */
+  .taken
+  {
+    background-size: cover;
+    border-width: 0;
+  }
+  
+  .taken.horizontal.start.destroyer
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/destroyer2/1.png');
+  }
+  
+  .taken.horizontal.end.destroyer
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/destroyer2/2.png');
+  }
+  
+  .taken.horizontal.start.submarine, .taken.horizontal.start.cruiser
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/submarine&cruiser3/1.png');
+  }
+  
+  .taken.horizontal.one.submarine, .taken.horizontal.one.cruiser 
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/submarine&cruiser3/2.png');
+  }
+  
+  .taken.horizontal.end.submarine, .taken.horizontal.end.cruiser 
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/submarine&cruiser3/3.png');
+  }
+  
+  .taken.horizontal.start.battleship
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/battleship4/1.png');
+  }
+  
+  .taken.horizontal.one.battleship
+  {
+    background-image : url('../images/boat_IG_image/Horizontal/battleship4/2.png');
+  }
+  
+  .taken.horizontal.two.battleship
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/battleship4/3.png');
+  }
+  
+  .taken.horizontal.end.battleship
+  {
+    background-image : url('../images/boat_IG_image/Horizontal/battleship4/4.png');
+  }
+  
+  .taken.horizontal.start.carrier
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/carrier5/1.png');
+  }
+  
+  .taken.horizontal.one.carrier
+  {
+    background-image : url('../images/boat_IG_image/Horizontal/carrier5/2.png');
+  }
+  
+  .taken.horizontal.two.carrier
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/carrier5/3.png');
+  }
+  
+  .taken.horizontal.three.carrier
+  {
+    background-image: url('../images/boat_IG_image/Horizontal/carrier5/4.png');
+  }
+  
+  .taken.horizontal.end.carrier
+  {
+    background-image : url('../images/boat_IG_image/Horizontal/carrier5/5.png');
+  }
+  
+  
+  .taken.vertical.start.destroyer
+  {
+    background-image: url('../images/boat_IG_image/Vertical/destroyer2/1.png');
+  }
+  
+  .taken.vertical.end.destroyer
+  {
+    background-image: url('../images/boat_IG_image/Vertical/destroyer2/2.png');
+  }
+  
+  .taken.vertical.start.submarine, .taken.vertical.start.cruiser
+  {
+    background-image: url('../images/boat_IG_image/Vertical/submarine&cruiser3/1.png');
+  }
+  
+  .taken.vertical.one.submarine, .taken.vertical.one.cruiser
+  {
+    background-image: url('../images/boat_IG_image/Vertical/submarine&cruiser3/2.png');
+  }
+  
+  .taken.vertical.end.submarine, .taken.vertical.end.cruiser
+  {
+    background-image: url('../images/boat_IG_image/Vertical/submarine&cruiser3/3.png');
+  }
+  
+  .taken.vertical.start.battleship
+  {
+    background-image: url('../images/boat_IG_image/Vertical/battleship4/1.png');
+  }
+  
+  .taken.vertical.one.battleship
+  {
+    background-image : url('../images/boat_IG_image/Vertical/battleship4/2.png');
+  }
+  
+  .taken.vertical.two.battleship
+  {
+    background-image: url('../images/boat_IG_image/Vertical/battleship4/3.png');
+  }
+  
+  .taken.vertical.end.battleship
+  {
+    background-image : url('../images/boat_IG_image/Vertical/battleship4/4.png');
+  }
+  
+  .taken.vertical.start.carrier
+  {
+    background-image: url('../images/boat_IG_image/Vertical/carrier5/1.png');
+  }
+  
+  .taken.vertical.one.carrier
+  {
+    background-image : url('../images/boat_IG_image/Vertical/carrier5/2.png');
+  }
+  
+  .taken.vertical.two.carrier
+  {
+    background-image: url('../images/boat_IG_image/Vertical/carrier5/3.png');
+  }
+  
+  .taken.vertical.three.carrier
+  {
+    background-image: url('../images/boat_IG_image/Vertical/carrier5/4.png');
+  }
+  
+  .taken.vertical.end.carrier
+  {
+    background-image : url('../images/boat_IG_image/Vertical/carrier5/5.png');
+  }
+  
+  
+  
+  
+  /* Animations blanches autour des bateaux sur le board USER*/ 
+  
+  .taken.start.vertical,
+  .taken.start.vertical::before {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+  
+  .taken.end.vertical,
+  .taken.end.vertical::before {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  
+  .taken.start.horizontal,
+  .taken.start.horizontal::before {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  
+  .taken.end.horizontal,
+  .taken.end.horizontal::before {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  
+  .taken.vertical::before,
+  .taken.horizontal::before {
+    content: '';
+    position: absolute;
+    border: .3vmin solid white;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+  }
+  
+  .taken.horizontal::before {
+    animation: ripplesY 3s linear infinite;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .taken.vertical::before {
+    animation: ripplesX 3s linear infinite;
+    border-top: none;
+    border-bottom: none;
+  
+  }
+  
+  @keyframes ripplesX {
+    0% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scaleX(1.5);
+    }
+  }
+  
+  @keyframes ripplesY {
+    0% {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scaleY(1.5);
+    }
+  }
+  
